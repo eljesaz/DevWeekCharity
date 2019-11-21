@@ -1,0 +1,30 @@
+﻿<Window x:Class="DEVWeekCharity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DEVWeekCharity"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <StackPanel>
+        <Grid>
+            <TextBlock Text="{Binding RemainingSum, Mode=TwoWay, StringFormat=\{0\} den}" HorizontalAlignment="Center" FontSize="80"></TextBlock>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Margin="15" Content="{Binding InfoMessage}"></Label>
+            <Button Grid.Row="1" Margin="15" Width="300" Name="Button50" Click="Donated50" >50 den</Button>
+            <Button Grid.Row="2" Margin="15" Width="300" Name="Button100" Click="Donated100">100 den</Button>
+            <Button Grid.Row="3" Margin="15" Width="300" Name="Button150" Click="Donated150">150 den</Button>
+            <Button Grid.Row="4" Margin="15" Width="300" Name="Button200" Click="Donated200">200 den</Button>
+            <Button Grid.Row="5" Margin="15" Width="300" Name="Button500" Click="Donated500">500 den</Button>
+        </Grid>
+    </StackPanel>    
+</Window>
